@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typografie</title>
+    <style>
+      p {
+        border: none;
+        font-family: roboto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Zarovnání textu - pomocí text-align</h1>
+      <p style="text-align: center">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce aliquam
+        vestibulum ipsum. Aenean vel massa quis mauris vehicula lacinia. Itaque
+        earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat. Donec iaculis gravida nulla. Donec quis nibh at
+        felis congue commodo
+      </p>
+      <p style="text-align: justify">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce aliquam
+        vestibulum ipsum. Aenean vel massa quis mauris vehicula lacinia. Itaque
+        earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat. Donec iaculis gravida nulla. Donec quis nibh at
+        felis congue commodo
+      </p>
+      <p style="text-align: right">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce aliquam
+        vestibulum ipsum. Aenean vel massa quis mauris vehicula lacinia. Itaque
+        earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat. Donec iaculis gravida nulla. Donec quis nibh at
+        felis congue commodo
+      </p>
+    </section>
+
+    <section>
+      <h1>Tučné písmo, kurzíva a podtržené písmo</h1>
+      <p style="font-style: italic">kurzíva</p>
+      <p style="font-weight: bolder">tučné písmo</p>
+      <p style="font-weight: 100">tučné písmo</p>
+      <p style="font-weight: 400">tučné písmo</p>
+      <p style="font-weight: 600">tučné písmo</p>
+      <p style="font-weight: 900">tučné písmo</p>
+      <p style="text-decoration: underline">podtržené písmo</p>
+      <p style="text-decoration: underline dashed rgb(127, 199, 20) 5px">
+        podtržené písmo
+      </p>
+    </section>
+
+    <section>
+      <h1>Velikost textu</h1>
+      <p style="font-size: 10px">malé písmo</p>
+      <p style="font-size: 50px">Větší písmo</p>
+      <h3>význam procent</h3>
+      <div class="parent">
+        Rodičovský text
+        <div class="potomek" style="font-size: 80%">Text potomka</div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Výška řádku</h1>
+      <p style="width: 200px">
+        Klasická výška řádku: Lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit.
+      </p>
+      <p style="width: 200px; line-height: 50px">
+        50px jako výška řádku: Lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit.
+      </p>
+      <p style="width: 200px; line-height: 5px">
+        Příliš malá výška řádku: Lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit.
+      </p>
+    </section>
+
+    <section>
+      <h1>
+        <span style="text-transform: uppercase">upperace </span>
+        <span style="text-transform: lowercase">LOWERCASE</span>
+      </h1>
+    </section>
+
+    <section>
+      <h1>Rodina písma</h1>
+      <p style="font-family: 'Courier New', Courier, monospace">
+        Sans serif: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Fusce aliquam vestibulum ipsum. Aenean vel massa quis mauris vehicula
+        lacinia. Itaque earum rerum hic tenetur a sapiente delectus.
+      </p>
+      <p style="font-family: serif">
+        Serif: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce
+        aliquam vestibulum ipsum. Aenean vel massa quis mauris vehicula lacinia.
+        Itaque earum rerum hic tenetur a sapiente delectus.
+      </p>
+      <p style="font-family: monospace">
+        Monospace: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Fusce aliquam vestibulum ipsum. Aenean vel massa quis mauris vehicula
+        lacinia. Itaque earum rerum hic tenetur a sapiente delectus.
+      </p>
+      <!-- <p style="font-family: ">
+        Kaligrafic: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Fusce aliquam vestibulum ipsum. Aenean vel massa quis mauris vehicula
+        lacinia. Itaque earum rerum hic tenetur a sapiente delectus.
+      </p> -->
+
+      <h2>font family with google fonts</h2>
+      <p style="font-family: Montserrat, sans-serif">
+        Google font: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Fusce aliquam vestibulum ipsum. Aenean vel massa quis mauris vehicula
+        lacinia. Itaque earum rerum hic tenetur a sapiente delectus.
+      </p>
+    </section>
+  </body>
+</html>

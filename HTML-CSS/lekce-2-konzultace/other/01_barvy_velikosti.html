@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Barvy</title>
+    <style>
+      :root {
+        --primary-color: rgb(15, 8, 200);
+        --secondary-color: rgb(5, 70, 20);
+        /*--width-p: 200px;*/
+      }
+
+      .with_variables {
+        background-color: var(--primary-color);
+        width: var(--width-p);
+      }
+      h1 {
+        color: var(--primary-color);
+      }
+
+      h3 {
+        color: var(--secondary-color);
+      }
+    </style>
+  </head>
+
+  <body style="padding: 0; margin: 0">
+    <h1>BARVY</h1>
+    <p style="color: red">barva textu</p>
+    <p style="background-color: red">barva pozadí</p>
+    <p style="background: linear-gradient(lightgreen, darkgreen)">
+      barevné předhody horizontální
+    </p>
+    <p style="background: linear-gradient(45deg, yellow, black, red, blue)">
+      barevné předhody vertikální
+    </p>
+    <p style="background: radial-gradient(lightgreen, darkgreen); height: 50px">
+      Kruhový přechod
+    </p>
+    <h3>růuzné zápisy barev</h3>
+    <p style="background-color: rgb(32, 181, 47)">
+      pomocí desítkového RGB zápisu
+    </p>
+    <p style="background-color: #20b52f">pomocí hexadecimálního rgb zápisu</p>
+
+    <div style="padding: 10px; background-color: red">
+      <p style="background-color: rgba(52, 189, 0, 0.2)">
+        pomocí RGB zápisu i s transparentností
+      </p>
+    </div>
+    <p class="with_variables">barva přidaná pomocí variables</p>
+    <p class="with_blue">barva přidaná pomocí variables</p>
+    <!-- <h1>Délkové jednotky</h1>
+    <h3>Absolutní</h3>
+    <p style="width: 15px; background-color: red">px</p>
+    <p style="width: 15mm; background-color: red">mm</p>
+    <p style="width: 15pt; background-color: red">pt</p>
+    <h3>Relativní</h3>
+    <p style="width: 20em; background-color: red; font-size: 15px">
+      em - spjaté s velikostí písma
+    </p>
+    <p style="width: 20em; background-color: red; font-size: 30px">
+      <span style="font-size: 15px">em - spjaté s velikostí písma</span>
+    </p>
+    <p style="width: 20em; background-color: red; font-size: 15px">
+      <span style="font-size: 30px">em - spjaté s velikostí písma</span>
+      více velikostí v odstavci
+    </p>
+    <h3>počítané z výšky a šířky</h3>
+    <div style="width: 50%; background-color: yellow">
+      <p style="width: 50%; height: 100%; background-color: red">
+        % - procenta z nadřazeného elementu
+      </p>
+    </div>
+    <div style="width: 50vw; background-color: yellow">
+      <p style="width: 50vw; background-color: red">
+        vw - procenta z šířky obrazovky
+      </p>
+    </div>
+    <p style="width: 100vh; background-color: red">
+      vh - procenta z výšky obrazovky
+    </p>
+    <p style="width: 50vmin">vmin - minimum z vh a vw</p>
+    <p style="width: 50vmax">vmmax - maximum z vh a vw</p>
+    <h4>rozdíl mezi % a vw</h4> -->
+    <!-- <div class="parent">
+      Rodičovský element
+      <div class="potomek" style="width: 80%">Potomek s procenty</div>
+      <div class="potomek" style="width: 80vw">Potomek s vw</div>
+    </div> -->
+  </body>
+</html>

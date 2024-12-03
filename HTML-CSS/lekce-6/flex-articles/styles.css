@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d8aeb7;
+}
+
+.article-container {
+  background-color: white;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  border: 1px solid;
+  gap: 20px;
+}
+
+.article-text {
+  border: 1px solid;
+  width: 50%;
+}
+
+.article-image {
+  width: 50%;
+}
+
+.article-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

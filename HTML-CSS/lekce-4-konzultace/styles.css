@@ -1,0 +1,24 @@
+.div_1 {
+  background-color: green;
+  height: 200px;
+}
+.div_2 {
+  background-color: red;
+  height: 200px;
+}
+
+@media (min-width: 687px) {
+  .div_1,
+  .div_2 {
+    display: inline-block;
+    width: calc(50% - 4px);
+  }
+  .text_1,
+  .text_2 {
+    display: inline-block;
+    width: calc(50% - 24px);
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
