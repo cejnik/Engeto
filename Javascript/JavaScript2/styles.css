@@ -1,0 +1,22 @@
+/* Obecné styly, vynulování okrajů */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sekce result */
+.result {
+  height: 100vh;
+  background-color: #141414;
+
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+}
+
+.result p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: large;
+}
