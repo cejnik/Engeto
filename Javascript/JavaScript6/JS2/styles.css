@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+}
+
+header {
+  background-color: #db0000;
+  color: white;
+  text-align: center;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  transition: linear 0.5s;
+}
+
+header h1 {
+  line-height: 80px;
+  transition: linear 0.5s;
+}
+
+.about-us {
+  color: white;
+  padding-top: 80px;
+}

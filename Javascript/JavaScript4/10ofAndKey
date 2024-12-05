@@ -1,0 +1,24 @@
+const testResults = [98, 56, 82, 76, 88];
+
+for (oneResult of testResults) {
+  console.log(oneResult);
+}
+const person1 = {
+  firstName: "David",
+  secondName: "Šetek",
+  age: 35,
+};
+
+for (key in person1) {
+  console.log(key);
+}
+
+const person = {
+  firstName: "David",
+  secondName: "Šetek",
+  age: 35,
+};
+
+for (key in person) {
+  console.log(person[key]);
+}
