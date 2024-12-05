@@ -1,0 +1,45 @@
+body {
+  width: 700px;
+  margin: auto;
+}
+ul {
+  background-color: aqua;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+
+li:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  li {
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+    border-collapse: collapse;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: 50% 5%;
+}
+.obrazek {
+  background-color: red;
+  height: 300px;
+  background-image: url(https://www.inadoma.cz/wp-content/uploads/2022/10/Chov-leguana-zeleneho-x1024.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+}
