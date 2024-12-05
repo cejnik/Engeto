@@ -1,0 +1,57 @@
+:root {
+  --nadpis-barva: #3498db;
+  --nadpis-header: rgba(52, 125, 219, 0.5);
+}
+footer {
+  background-color: rgb(176, 176, 228);
+  text-decoration: none;
+  font-weight: bold;
+  color:#3498db;
+}
+.menu {
+  background-color: rgb(246, 250, 31);
+}
+.container {
+  background-color: white;
+}
+h1 {
+  color: var(--nadpis-barva);
+}
+h2 {
+  color: var(--nadpis-barva);
+  margin-bottom: 10px;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+header {
+  background-color: var(--nadpis-header);
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+footer a:visited {
+  color: lightpink;
+}
+
+footer a:hover {
+  color: orange;
+}
+
+footer a:active {
+  color: green;
+}
+
+.menu {
+  color: #f37e10;
+  text-underline-position
+}
+
+.menu a:hover {
+  color: rgb(34, 216, 58);
+}

@@ -1,0 +1,143 @@
+:root {
+  --bc-color: #f4f4f4;
+  --container-bc-color: white;
+  --h1-color: #3498db;
+  --menu-bc-color: rgb(52, 73, 94);
+  --menu-color: #ecf0f1;
+  --menu-hover-color: #3498db;
+  --general-color: #333;
+  --header-bc-color: rgba(52, 152, 219, 0.5);
+}
+
+.menu {
+  background-color: var(--menu-bc-color);
+  padding: 0;
+}
+
+.menu a {
+  color: var(--menu-color);
+  text-decoration: none;
+}
+
+.menu li {
+  display: inline-block;
+  width: calc(25% - 4px);
+  /* background-color: red; */
+  text-align: center;
+  padding: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .menu li {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 768px) {
+  ul {
+    display: grid;
+  }
+} ještě jsme se neučili*/
+
+.menu a:hover {
+  color: var(--menu-hover-color);
+}
+
+.container {
+  background-color: var(--container-bc-color);
+  padding: 20px;
+  width: 70vw;
+  margin: auto;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+/* img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+} */
+
+.obrazek {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("./images/john_doe.jpg");
+  background-size: cover;
+  display: inline-block;
+  /* margin: 0 auto; */
+}
+
+body {
+  background-color: var(--bc-color);
+  color: var(--general-color);
+  font-family: sans-serif;
+}
+
+header {
+  background-color: var(--header-bc-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.job-title {
+  font-style: italic;
+  color: rgb(136, 136, 136);
+}
+
+.menu {
+  text-decoration: none;
+}
+
+.about p {
+  text-align: justify;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+}
+
+th {
+  border: 1px solid #ddd;
+  background-color: #ecf0f1;
+  padding: 15px;
+}
+
+/* .even {
+  background-color: #f9f9f9;
+} */
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.first-column {
+  width: 40%;
+}
+
+section {
+  line-height: 1.6;
+}
+
+footer p a,
+footer p {
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
