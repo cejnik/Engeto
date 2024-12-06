@@ -31,8 +31,8 @@ class TwoContentChecker {
 }
 
 /*******************
-       Použití
-********************/
+         Použití
+  ********************/
 const emailInputs = document.querySelectorAll(".email-input");
 const paragraphText = document.querySelector(".result-text");
 
