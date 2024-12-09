@@ -1,5 +1,3 @@
-const root = document.getElementById("todo");
-
 class TodoItem {
   constructor(args) {
     const { title, completed } = args;
@@ -32,6 +30,7 @@ class TodoItem {
   }
 }
 
+const root = document.getElementById("todo");
 const textInput = document.createElement("input");
 textInput.type = "text";
 root.appendChild(textInput);
