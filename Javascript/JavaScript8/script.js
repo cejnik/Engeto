@@ -52,6 +52,13 @@ try {
 
 newCoffeeMachine.brew();
 
-class TeamMachine extends CoffeeMachine {
-  return this.waterlevel < 500;
+class TeaMachine extends CoffeeMachine {
+  /**
+   * Indikuje, že je potřeba doplnit vodu
+   *
+   * @returns boolean
+   */
+  needsRefill() {
+    return this.waterLevel < 500;
+  }
 }
