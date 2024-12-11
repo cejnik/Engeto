@@ -12,10 +12,22 @@ class CoffeeMachine {
     return this.waterLevel < 200;
   }
 
+  /**
+   * Hláška po přidání vody do zásobníku
+   *
+   * @param Number Množství vody v ml
+   *
+   * @returns
+   */
   _messageAddedWater(amount) {
     return `Added ${amount}ml of water, currently theres ${this.waterLevel}ml of water`;
   }
 
+  /**
+   * Hláška při výdeji nápoje
+   *
+   * @returns
+   */
   _messageBrewing() {
     return "Brewing coffee";
   }
