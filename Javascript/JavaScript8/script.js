@@ -12,6 +12,14 @@ class CoffeeMachine {
     return this.waterLevel < 200;
   }
 
+  _messageAddedWater(amount) {
+    return `Added ${amount}ml of water, currently theres ${this.waterLevel}ml of water`;
+  }
+
+  _messageBrewing() {
+    return "Brewing coffee";
+  }
+
   /**
    * Přidává vodu v zadaném množství do zásobníku
    *
@@ -25,9 +33,7 @@ class CoffeeMachine {
     }
 
     this.waterLevel = this.waterLevel + amount;
-    console.log(
-      `Added ${amount}ml of water, currently theres ${this.waterLevel}ml of water`
-    );
+    console.log(this._messageAddedWater(amount));
   }
 
   /**
@@ -41,7 +47,7 @@ class CoffeeMachine {
     }
 
     this.waterLevel = this.waterLevel - 200;
-    console.log("Brewing coffee");
+    console.log(this._messageBrewing());
   }
 }
 
@@ -60,12 +66,21 @@ myCoffeeMachine.brew(); */
 
 class TeaMachine extends CoffeeMachine {
   /**
-   * Indikuje, že je potřeba doplnit vodu
+   * Indikuje, že je potřeba doplnit vodu, čaj vyžaduje více vody než kafe
    *
    * @returns boolean
    */
   needsRefill() {
     return this.waterLevel < 500;
+  }
+
+  /**
+   * Přetěžuji originální metodu, měním hlášku
+   *
+   * @returns
+   */
+  _messageBrewing() {
+    return "Brewing tea";
   }
 }
 
@@ -75,9 +90,9 @@ class TeaMachine extends CoffeeMachine {
 const myTeaMachine = new TeaMachine();
 
 try {
-  myCoffeeMachine.brew();
+  myTeaMachine.brew();
 } catch (error) {
-  myCoffeeMachine.addWater(200);
+  myTeaMachine.addWater(400);
 }
 
-myCoffeeMachine.brew();
+myTeaMachine.brew();
