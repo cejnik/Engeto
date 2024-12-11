@@ -51,3 +51,7 @@ try {
 }
 
 newCoffeeMachine.brew();
+
+class TeamMachine extends CoffeeMachine {
+  return this.waterlevel < 500;
+}
