@@ -1,110 +1,61 @@
-class CoffeeMachine {
-  constructor() {
-    this.waterLevel = 150;
-  }
-
-  /**
-   * Indikuje, že je potřeba doplnit vodu
-   *
-   * @returns boolean
-   */
-  needsRefill() {
-    return this.waterLevel < 200;
-  }
-
-  /**
-   * Hláška po přidání vody do zásobníku
-   *
-   * @param Number Množství vody v ml
-   *
-   * @returns
-   */
-  _messageAddedWater(amount) {
-    return `Added ${amount}ml of water, currently theres ${this.waterLevel}ml of water`;
-  }
-
-  /**
-   * Hláška při výdeji nápoje
-   *
-   * @returns
-   */
-  _messageBrewing() {
-    return "Brewing coffee";
-  }
-
-  /**
-   * Přidává vodu v zadaném množství do zásobníku
-   *
-   * @throws Argument není číslo
-   *
-   * @param Number Množství vody v ml
-   */
-  addWater(amount) {
-    if (typeof amount !== "number") {
-      throw new Error("Parameter is not a number");
+class Operace {
+  constructor(a, b) {
+    if (typeof a != "number" || typeof b != "number") {
+      throw new Error("Operandy musí být čísla");
     }
 
-    this.waterLevel = this.waterLevel + amount;
-    console.log(this._messageAddedWater(amount));
+    this.a = a;
+    this.b = b;
   }
 
   /**
-   * Tato funkce vaří kávu, nejdříve zkontroluje hladinu vody v zásobníku
+   * Abstraktní metoda vrací výsledek operace.
+   * Vždy je potřeba ji přetížit (nahradit) v odvozené/dědické třídě
    *
-   * @throws Není dostatek vody v zásobníku
+   * @return number Výsledek operace s čísly A a B
    */
-  brew() {
-    if (this.needsRefill()) {
-      throw new Error("Need to refeill the water");
-    }
-
-    this.waterLevel = this.waterLevel - 200;
-    console.log(this._messageBrewing());
+  result() {
+    throw new Error("Metoda result musí být implementována");
   }
 }
 
-/**
- * Obsahuje objekt kávovaru ze třídy CoffeeMachine
- */
-/* const myCoffeeMachine = new CoffeeMachine;
-
-try{
-  myCoffeeMachine.brew();
-} catch(error){
-  myCoffeeMachine.addWater(200);
-}
-
-myCoffeeMachine.brew(); */
-
-class TeaMachine extends CoffeeMachine {
+class Nasobeni extends Operace {
   /**
-   * Indikuje, že je potřeba doplnit vodu, čaj vyžaduje více vody než kafe
-   *
-   * @returns boolean
+   * Vrací výsledek po násobení A a B
    */
-  needsRefill() {
-    return this.waterLevel < 500;
-  }
-
-  /**
-   * Přetěžuji originální metodu, měním hlášku
-   *
-   * @returns
-   */
-  _messageBrewing() {
-    return "Brewing tea";
+  result() {
+    return this.a * this.b;
   }
 }
 
-/**
- * Obsahuje objekt kávovaru ze třídy CoffeeMachine
- */
-const myTeaMachine = new TeaMachine();
-
-try {
-  myTeaMachine.brew();
-} catch (error) {
-  myTeaMachine.addWater(400);
+class Soucet extends Operace {
+  result() {
+    return this.a + this.b;
+  }
 }
 
-myTeaMachine.brew();
+class Minus extends Operace {
+  result() {
+    return this.a - this.b;
+  }
+}
+
+class Deleno extends Operace {
+  result() {
+    return this.a / this.b;
+  }
+}
+
+// iniciuji objekt operace s operandy A a B
+const Op = new Nasobeni(4, 5);
+console.log(Op.result());
+
+// iniciuji objekt operace s operandy A a B
+const Op2 = new Soucet(4, 5);
+console.log(Op2.result());
+
+const Op3 = new Minus(4, 5);
+console.log(Op3.result());
+
+const Op4 = new Deleno(4, 5);
+console.log(Op4.result());
