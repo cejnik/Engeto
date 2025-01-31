@@ -1,0 +1,566 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.heading {
+  background-color: #c77b18;
+  color: black;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading span {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: #c77b18;
+  color: black;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  max-width: 960px;
+  margin: auto;
+  background-color: #c77b18;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  color: #c77b18;
+  background-color: white;
+}
+
+nav ul li a:focus {
+  outline: none;
+}
+
+.basic-info {
+  background-color: #c77b18;
+  text-align: center;
+  justify-content: center;
+}
+
+.basic-info-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #c77b18;
+  color: black;
+  border-radius: 8px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+br {
+  margin: 20px 0;
+}
+
+.point-of-interest-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #c77b18;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+br {
+  margin: 20px 0;
+}
+
+.img-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #c77b18;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.photo-text {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.img-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #c77b18;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  margin: 10px;
+  border-radius: 8px;
+  position: relative;
+  opacity: 1;
+}
+
+.photo:hover {
+  transform: scale(1.5);
+  z-index: 2;
+  opacity: 1;
+}
+
+.photo:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.7;
+}
+
+.feedback-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feedback-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.feedback-container label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #555;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.feedback-container textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.feedback-container button {
+  padding: 12px 20px;
+  background-color: #c77b18;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-container button:hover {
+  background-color: #a66a13;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+textarea:valid {
+  border-color: green;
+}
+
+.footer-information {
+  background-color: #c77b18;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-information p {
+  margin: 0;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  margin-top: 20px;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Zmenšení velikosti nadpisu */
+  .heading {
+    font-size: 28px;
+    padding: 20px 0;
+  }
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .heading span {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+
+  /* Navigace */
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: column; /* Změna z horizontálního layoutu na vertikální */
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  /* Základní informace a ostatní kontejnery */
+  .basic-info-container,
+  .point-of-interest-container,
+  .img-container,
+  .feedback-container {
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  .basic-info,
+  .point-of-interest-container {
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .img-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .photo {
+    width: 80vw;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .photo:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .photo:not(:hover) {
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  .photo-text {
+    font-size: 20px;
+  }
+
+  .feedback-container input,
+  .feedback-container textarea {
+    font-size: 14px;
+  }
+
+  .feedback-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .footer-information {
+    font-size: 14px;
+    padding: 15px 0;
+  }
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: #c77b18;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: none; /* Skrýt tlačítko na začátku */
+}
+
+#back-to-top:hover {
+  background-color: #a66a13;
+}
+
+/* Bounce animace */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Když se tlačítko zobrazí, animujeme ho */
+.show-bounce {
+  animation: bounce 1s ease-out;
+}
+
+/* Darkmode/lightmode -----------------------------------------*/
+/* Footer */
+.footer-information {
+  text-align: center;
+  padding: 20px;
+  background-color: #c77b18;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+}
+
+/* Tlačítka v patičce */
+#dark-mode-toggle {
+  position: absolute;
+  color: black;
+  left: 20px;
+  bottom: 20px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+#back-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* Původní světelný režim */
+body {
+  color: #333;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+/* Třída pro temný režim */
+body.dark {
+  background-color: #121212; /* Temné pozadí pro Dark Mode */
+  color: black; /* Světlý text pro temný režim */
+}
+
+/* Nastavení pro navigaci */
+nav a {
+  color: #333; /* Světlejší text pro odkazy ve světelném režimu */
+  transition: color 1s ease;
+}
+
+body.dark nav a {
+  color: black; /* Světlé odkazy pro temný režim */
+}
+
+/* Patička */
+.footer-information {
+  background-color: #c77b18; /* Původní barva pro patičku ve světelném režimu */
+}
+
+body.dark .footer-information {
+  background-color: #333; /* Temná barva pro patičku v temném režimu */
+  color: #f5f5f5; /* Světlý text pro patičku v temném režimu */
+}
+
+/* Tlačítka */
+#dark-mode-toggle {
+  color: black; /* Tmavé tlačítko pro světelný režim */
+}
+
+body.dark #dark-mode-toggle {
+  color: white; /* Světlé tlačítko pro temný režim */
+}
+
+/*Emaily-------------------------------------------------------------------*/
+/* Styl upozornění */
+#warning-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Styl formulářových polí */
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus {
+  border-color: #c77b18;
+  outline: none;
+}
+
+/* Styl tlačítek (pokud přidáš tlačítko později) */
+button {
+  padding: 12px 20px;
+  background-color: #c77b18;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a66a13;
+}
