@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 .heading {
   background-color: #c77b18;
   color: black;
@@ -90,13 +87,6 @@ nav ul li a:focus {
   border-radius: 8px;
 }
 
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -110,14 +100,6 @@ li {
 p {
   margin-bottom: 15px;
   font-size: 16px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-br {
-  margin: 20px 0;
 }
 
 .point-of-interest-container {
@@ -138,26 +120,9 @@ h3 {
   text-transform: uppercase;
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
 p {
   margin-bottom: 15px;
   font-size: 16px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-br {
-  margin: 20px 0;
 }
 
 .img-container {
@@ -204,7 +169,7 @@ br {
   opacity: 1;
 }
 
-.photo:not(:hover) {
+.photo-container:hover > :not(:hover) {
   filter: blur(3px);
   opacity: 0.7;
 }
@@ -306,7 +271,6 @@ textarea:valid {
 }
 
 @media (max-width: 768px) {
-  /* Zmenšení velikosti nadpisu */
   .heading {
     font-size: 28px;
     padding: 20px 0;
@@ -320,13 +284,12 @@ textarea:valid {
     padding: 0 15px;
   }
 
-  /* Navigace */
   nav {
     padding: 15px 0;
   }
 
   nav ul {
-    flex-direction: column; /* Změna z horizontálního layoutu na vertikální */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -339,7 +302,6 @@ textarea:valid {
     padding: 8px 12px;
   }
 
-  /* Základní informace a ostatní kontejnery */
   .basic-info-container,
   .point-of-interest-container,
   .img-container,
@@ -378,7 +340,7 @@ textarea:valid {
   }
 
   .photo:not(:hover) {
-    filter: blur(0px);
+    filter: blur(px);
     opacity: 1;
   }
 
@@ -415,14 +377,13 @@ textarea:valid {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  display: none; /* Skrýt tlačítko na začátku */
+  display: none;
 }
 
 #back-to-top:hover {
   background-color: #a66a13;
 }
 
-/* Bounce animace */
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -444,13 +405,10 @@ textarea:valid {
   }
 }
 
-/* Když se tlačítko zobrazí, animujeme ho */
 .show-bounce {
   animation: bounce 1s ease-out;
 }
 
-/* Darkmode/lightmode -----------------------------------------*/
-/* Footer */
 .footer-information {
   text-align: center;
   padding: 20px;
@@ -460,12 +418,11 @@ textarea:valid {
   position: relative;
 }
 
-/* Tlačítka v patičce */
 #dark-mode-toggle {
   position: absolute;
   color: black;
   left: 20px;
-  bottom: 20px;
+  bottom: 10px;
   font-weight: bold;
   background: none;
   border: none;
@@ -482,49 +439,42 @@ textarea:valid {
   transform: scale(1.1);
 }
 
-/* Původní světelný režim */
 body {
   color: #333;
   transition: background-color 1s ease, color 1s ease;
 }
 
-/* Třída pro temný režim */
 body.dark {
-  background-color: #121212; /* Temné pozadí pro Dark Mode */
-  color: black; /* Světlý text pro temný režim */
+  background-color: #121212;
+  color: black;
 }
 
-/* Nastavení pro navigaci */
 nav a {
-  color: #333; /* Světlejší text pro odkazy ve světelném režimu */
+  color: #333;
   transition: color 1s ease;
 }
 
 body.dark nav a {
-  color: black; /* Světlé odkazy pro temný režim */
+  color: black;
 }
 
-/* Patička */
 .footer-information {
-  background-color: #c77b18; /* Původní barva pro patičku ve světelném režimu */
+  background-color: #c77b18;
 }
 
 body.dark .footer-information {
-  background-color: #333; /* Temná barva pro patičku v temném režimu */
-  color: #f5f5f5; /* Světlý text pro patičku v temném režimu */
+  background-color: #333;
+  color: #f5f5f5;
 }
 
-/* Tlačítka */
 #dark-mode-toggle {
-  color: black; /* Tmavé tlačítko pro světelný režim */
+  color: black;
 }
 
 body.dark #dark-mode-toggle {
-  color: white; /* Světlé tlačítko pro temný režim */
+  color: white;
 }
 
-/*Emaily-------------------------------------------------------------------*/
-/* Styl upozornění */
 #warning-text {
   font-size: 16px;
   font-weight: bold;
@@ -532,7 +482,6 @@ body.dark #dark-mode-toggle {
   display: block;
 }
 
-/* Styl formulářových polí */
 input[type="email"] {
   width: 100%;
   padding: 10px;
@@ -549,7 +498,6 @@ input[type="email"]:focus {
   outline: none;
 }
 
-/* Styl tlačítek (pokud přidáš tlačítko později) */
 button {
   padding: 12px 20px;
   background-color: #c77b18;
